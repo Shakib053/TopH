@@ -1,0 +1,36 @@
+
+#include<bits/stdc++.h>
+#include<map>
+#include<iterator>
+#define pi 3.1416
+using namespace std;
+bool prime(int n) {
+    if(n<2){
+        return false;
+    }
+    if(n>=2){
+        for (int i = 2; i*i <=n; i++) {
+            if (n % i == 0) {
+                return false;
+        }
+    }
+    return true;
+    }
+}
+int main()
+{ 
+    int x;
+    cin>>x;
+  
+    for(long long int i=2,c=0;c<=x;i++)
+   {
+       if(prime(i)==true)
+       c++;
+       if(c==x){
+       cout<<i<<endl;
+       break;
+       }
+   }
+    return 0;
+
+}
